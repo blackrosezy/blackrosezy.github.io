@@ -22,14 +22,15 @@
     .container {
       max-width: 600px;
       width: 100%;
-      padding: 2rem; /* Increased padding */
+      padding: 2rem;
       box-sizing: border-box;
     }
 
     .text {
       font-size: clamp(1rem, 2.5vw, 1.25rem);
-      text-align: left;
-      line-height: 1.6;
+      text-align: justify;
+      text-justify: inter-word;
+      line-height: 1.8;
     }
 
     .timestamp {
@@ -40,10 +41,6 @@
     }
 
     @media (max-width: 480px) {
-      .text {
-        text-align: justify;
-      }
-
       .timestamp {
         text-align: center;
       }
