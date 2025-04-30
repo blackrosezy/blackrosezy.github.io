@@ -11,7 +11,7 @@
       padding: 0;
       background-color: #ffffff;
       font-family: 'Roboto Mono', monospace;
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -22,20 +22,31 @@
     .container {
       max-width: 600px;
       width: 100%;
-      padding: 0 1rem;
+      padding: 1rem;
+      box-sizing: border-box;
     }
 
     .text {
-      font-size: 1.25rem;
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
       text-align: left;
       line-height: 1.6;
     }
 
     .timestamp {
       margin-top: 1rem;
-      font-size: 0.95rem;
+      font-size: clamp(0.85rem, 2vw, 0.95rem);
       font-style: italic;
       text-align: right;
+    }
+
+    @media (max-width: 480px) {
+      .text {
+        text-align: justify;
+      }
+
+      .timestamp {
+        text-align: center;
+      }
     }
   </style>
 </head>
